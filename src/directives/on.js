@@ -3,7 +3,7 @@ import { kebabCase, debounce, isNumeric } from '../utils'
 export function registerListener(component, el, event, modifiers, expression, extraVars = {}) {
     if (modifiers.includes('away')) {
         let handler = e => {
-            // Don't do anything if the click came form the element or within it.
+            // Don't do anything if the click came from the element or within it.
             if (el.contains(e.target)) return
 
             // Don't do anything if this element isn't currently visible.
